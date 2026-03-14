@@ -1,0 +1,482 @@
+/* =========================
+   GEEK-IN — CSS PREMIUM
+========================= */
+
+:root {
+  --bg-dark: #0b0b12;
+  --bg-card: #151520;
+  --purple: #7c4dff;
+  --cyan: #00f5ff;
+  --gold: #f5c46b;
+  --text-main: #ffffff;
+  --text-muted: #cfcfe6;
+  --glow: 0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, #1b1233, #050509 60%),
+    linear-gradient(180deg, #06060a, #0b0b12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+header {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(5,5,15,0.85), rgba(5,5,15,0.95)),
+    url("/mnt/data/geekin.webp") center/contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+.hero {
+  background-image: url("https://i.imgur.com/pwFjG1d.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+
+.hero p {
+  margin-top: 25px;
+  font-size: 22px;
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 18px 50px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 30px rgba(124, 77, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 40px rgba(0,245,255,0.7),
+    0 0 80px rgba(124,77,255,0.5);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 70px;
+  background: linear-gradient(90deg, var(--gold), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(245,196,107,0.4);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.feature-card {
+  background: linear-gradient(145deg, #151520, #0e0e18);
+  border-radius: 25px;
+  padding: 35px;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.feature-card {
+  position: relative;
+}
+
+.feature-card::before,
+.feature-card::after {
+  pointer-events: none; /* 🔥 ISSO LIBERA O CLIQUE */
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,245,255,0.2);
+}
+
+.feature-card h3 {
+  color: var(--cyan);
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.product-card {
+  background: linear-gradient(160deg, #121222, #0b0b14);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.4s;
+}
+
+.product-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 30px 80px rgba(124,77,255,0.35);
+}
+
+.product-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 25px 0 10px;
+  font-size: 22px;
+}
+
+.select {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: none;
+  background: #0e0e10;
+  color: #fff;
+  border: 1px solid #00f5ff;
+  text-align: center;
+}
+
+
+.product-card p {
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.cta {
+  background:
+    radial-gradient(circle at top, rgba(0,245,255,0.25), transparent 60%),
+    linear-gradient(135deg, #5f2cff, #00f5ff);
+  color: #000;
+  text-align: center;
+  padding: 100px 30px;
+  border-radius: 40px;
+  margin: 120px 10%;
+  box-shadow: 0 0 80px rgba(0,245,255,0.6);
+}
+
+.cta h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #040408;
+  color: #888;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  section {
+    padding: 80px 6%;
+  }
+
+  .cta h2 {
+    font-size: 36px;
+  }
+}
+
+.btn-whatsapp {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  color: #000;
+  background: linear-gradient(90deg, #00f5ff, #7b61ff);
+
+  box-shadow: 0 0 25px rgba(0,245,255,0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 35px rgba(123,97,255,0.6);
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #ff1f1f;
+}
+
+
+/* =========================
+   CARRINHO FLUTUANTE
+========================= */
+
+#cart-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(0,245,255,0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cart-count {
+  background: #000;
+  color: var(--cyan);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  background: #121222;
+  color: #fff;
+  padding: 16px 22px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,245,255,0.4);
+  animation: slideIn 0.4s ease, fadeOut 0.4s ease 2.6s forwards;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(20px); }
+}
+.quantidade {
+  width: 80%;
+  margin: 12px auto 20px;
+  display: block;
+
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #00f5ff;
+
+  background: #0e0e10;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.quantidade:focus {
+  box-shadow: 0 0 15px rgba(0,245,255,0.6);
+  border-color: #7c4dff;
+}
+
+/* Remove setinhas padrão */
+.quantidade::-webkit-inner-spin-button,
+.quantidade::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantidade {
+  -moz-appearance: textfield;
+}
+.product-card {
+  text-align: center;
+}
+
+.product-card h3,
+.product-card p {
+  text-align: center;
+}
+
+.product-card img {
+  display: block;
+  margin: 0 auto;
+}
+.qty-wrapper {
+  width: 80%;
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0e0e10;
+  border: 1px solid #00f5ff;
+  border-radius: 16px;
+
+  box-shadow: 0 0 18px rgba(0,245,255,0.35);
+}
+
+.qty-wrapper button {
+  width: 48px;
+  height: 48px;
+
+  background: transparent;
+  color: #00f5ff;
+
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.qty-wrapper button:hover {
+  background: rgba(0,245,255,0.15);
+}
+
+.qty-wrapper input {
+  width: 100%;
+  border: none;
+  background: transparent;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  outline: none;
+}
+
+/* Remove setinhas nativas */
+.qty-wrapper input::-webkit-inner-spin-button,
+.qty-wrapper input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.qty-wrapper input {
+  -moz-appearance: textfield;
+}

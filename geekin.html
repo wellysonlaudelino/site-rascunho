@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEEK-in | Camisetas Geeks Exclusivas</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="geekstyle.css">
+</head>
+<!-- CARRINHO FLUTUANTE -->
+<div id="cart-float" onclick="irParaCarrinho()">
+  🛒 <span id="cart-count">0</span>
+</div>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <h1>GEEK-IN</h1>
+      <p>Camisetas geeks exclusivas para quem vive a cultura nerd</p>
+      <a href="#produtos" class="btn">Comprar agora</a>
+    </div>
+  </header>
+
+  <!-- BENEFÍCIOS -->
+  <section>
+    <h2 class="section-title">Por que escolher a GEEK-in?</h2>
+
+    <div class="features">
+      <div class="feature-card">
+        <h3>Design Exclusivo</h3>
+        <p>Estampas inspiradas em games, filmes e cultura geek.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Alta Qualidade</h3>
+        <p>Malha premium, confortável e resistente.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Entrega Nacional</h3>
+        <p>Enviamos para todo o Brasil com segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos">
+    <h2 class="section-title">Nossas Camisetas</h2>
+
+    <div class="products">
+
+      <!-- PRODUTO 1 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/8RKXAIV.jpg" alt="Camiseta Geek Classic">
+
+        <h3>Camiseta Hellfire Lives</h3>
+        <p>R$ 79,90</p>
+
+        <select class="select" id="tamanho-classic">
+          <option value="">Tamanho</option>
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+        </select>
+
+        <select class="select" id="cor-classic">
+          <option value="">Cor</option>
+          <option>Preto</option>
+          <option>Branco</option>
+          <option>Cinza</option>
+        </select>
+
+        <input
+           type="number"
+           min="1"
+           value="1"
+           class="quantidade"
+           id="qtd-classic"
+        />
+        <a href="javascript:void(0)" class="btn"
+        onclick="adicionarAoCarrinho(
+        'Hellfire Lives',
+        79.90,
+        'tamanho-classic',
+        'cor-classic',
+        'qtd-classic'
+        )">
+          Adicionar ao carrinho
+        </a>
+      </div>
+
+      <!-- PRODUTO 2 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/8RKXAIV.jpg" alt="Camiseta Gamer Pro">
+
+        <h3>Camiseta Mais Natural que Planta</h3>
+        <p>R$ 79,90</p>
+
+        <select class="select" id="tamanho-gamer">
+          <option value="">Tamanho</option>
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+        </select>
+
+        <select class="select" id="cor-gamer">
+          <option value="">Cor</option>
+          <option>Preto</option>
+          <option>Branco</option>
+          <option>Azul</option>
+        </select>
+
+        <input
+           type="number"
+           min="1"
+           value="1"
+           class="quantidade"
+           id="qtd-classic"
+        />
+
+        <a href="javascript:void(0)" class="btn"
+        onclick="adicionarAoCarrinho(
+        'Mais Natural que Planta',
+        79.90,
+        'tamanho-gamer',
+        'cor-gamer',
+        'qtd-gamer'
+        )">
+    Adicionar ao carrinho
+    </a>
+      </div>
+
+      <!-- PRODUTO 3 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/8RKXAIV.jpg" alt="Camiseta Gym Geek">
+
+        <h3>Camiseta Gym Geek</h3>
+        <p>R$ 94,90</p>
+
+        <select class="select" id="tamanho-gym">
+          <option value="">Tamanho</option>
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+        </select>
+
+        <select class="select" id="cor-gym">
+          <option value="">Cor</option>
+          <option>Preto</option>
+          <option>Cinza</option>
+          <option>Verde Militar</option>
+        </select>
+
+        <input
+           type="number"
+           min="1"
+           value="1"
+           class="quantidade"
+           id="qtd-classic"
+        />
+
+        <a href="javascript:void(0)" class="btn"
+          onclick="adicionarAoCarrinho(
+            'Camiseta Gym Geek',
+            94.90,
+            'tamanho-classic',
+            'cor-classic',
+            'qtd-classic'
+          )">
+          Adicionar ao carrinho
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section>
+    <h2 class="section-title">Sobre a Geekin</h2>
+
+    <div class="feature-card" style="max-width:900px;margin:auto;text-align:center;">
+      <p>
+        A <strong>Geekin</strong> nasceu em 2025 da paixão pela cultura geek,
+        games, filmes e tudo que faz a gente vibrar de verdade.
+      </p>
+      <br>
+      <p>
+        Somos nerds assumidos e ratinhos de academia.
+        Criamos camisetas que unem atitude, conforto e identidade,
+        tanto para o treino quanto para o dia a dia.
+      </p>
+      <br>
+      <p style="color:#00f5ff;font-weight:bold;">
+        Geekin — vista sua identidade.
+      </p>
+    </div>
+  </section>
+
+  <!-- CARRINHO -->
+  <section id="carrinho">
+    <h2 class="section-title">Seu Carrinho</h2>
+
+    <div class="feature-card" style="max-width:800px;margin:auto;">
+      <ul id="lista-carrinho" style="list-style:none;"></ul>
+
+      <h3 style="margin-top:20px;">
+        Total: R$ <span id="total">0.00</span>
+      </h3>
+
+      <button class="btn-whatsapp" onclick="finalizarWhatsApp()">
+        FINALIZAR NO WHATSAPP
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 GEEK-in — Todos os direitos reservados
+  </footer>
+
+  <!-- JS -->
+  <script src="geekin.js"></script>
+</body>
+</html>
